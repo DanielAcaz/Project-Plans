@@ -1,6 +1,7 @@
 package br.com.broscoder.projectsplan.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -13,6 +14,7 @@ public class Frequency implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    @JsonIgnore
     @OneToOne
     @JoinColumn(name = "project_id")
     private Project project;

@@ -1,17 +1,14 @@
 package br.com.broscoder.projectsplan.controller;
 
-import br.com.broscoder.projectsplan.model.Frequency;
 import br.com.broscoder.projectsplan.model.Project;
 import br.com.broscoder.projectsplan.model.ProjectRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-@RestController("/project")
+@RestController
+@RequestMapping("project")
 public class ProjectController {
 
     @Autowired
